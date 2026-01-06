@@ -112,17 +112,32 @@ private String apiKey;
 
 ## How It Works
 
-User sends POST request to /generate with JSON body.    
+User Request (JSON)
+        ↓
+EmailController
+        ↓
+EmailService
+        ↓
+OpenRouterAIService
+        ↓
+OpenRouter API (gpt-4o-mini)
+        ↓
+AI Generated Email
+        ↓
+EmailResponse (JSON)
 
-EmailController receives the request.
 
-EmailService calls OpenRouterAIService.
+1. User sends POST request to /generate with JSON body.    
 
-OpenRouterAIService sends request to OpenRouter API (gpt-4o-mini).
+2. EmailController receives the request.
 
-API returns generated email text.
+3. EmailService calls OpenRouterAIService.
 
-EmailService returns JSON response with:
+4. OpenRouterAIService sends request to OpenRouter API (gpt-4o-mini).
+
+5. API returns generated email text.
+
+6. EmailService returns JSON response with:
 
 emailTemplate
 
