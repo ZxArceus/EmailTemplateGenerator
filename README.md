@@ -86,18 +86,19 @@ Headers:
   "timeStamp": "2026-01-06T18:37:02"
 }
 ```
-### Health Check
-Endpoint:``` GET /api/health```
+## Health Check
+Endpoint: ``` GET /api/health```
+
 Response: ```"Email Generator is running!"```
 
-### API Key Environment Handling
+## API Key Environment Handling
 
 Never hardcode your API key in the project.
 
 Store it in environment variables
 
 
-### API key access in code 
+## API key access in code 
 
 ```
 @Value("${openrouter.api.key}"):
