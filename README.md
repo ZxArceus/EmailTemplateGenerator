@@ -49,7 +49,8 @@ cd EmailTemplateGenerator
 ### Set Environment variable 
 
 
-```Permanent setup (Windows):
+```
+Permanent setup (Windows):
 setx OPENROUTER_API_KEY "your_api_key_here"
 ```
 Restart your IDE or terminal after setting the environment variable.
@@ -69,17 +70,21 @@ mvn spring-boot:run
 ```
 ## API Documentation
 Generate Email Template
+
 Endpoint: ```POST /email/generate```
+
 Headers:
 ```Content-Type: application/json```
-```Request Body:
+```
+Request Body:
 {
   "purpose": "job interview follow-up",
   "recipientName": "HR Manager",
   "tone": "polite"
 }
 ```
-```Response (200 OK):
+```
+Response (200 OK):
 {
   "emailTemplate": "Subject: Interview Follow-Up\n\nDear HR Manager,\n\nThank you for the opportunity to interview for the Software Developer role. I appreciate your time and consideration. I am excited about the possibility of joining your team and contributing to ongoing projects.\n\nPlease let me know if you require any additional information.\n\nBest regards,\n[Your Name]",
   "responseTimeInMs": 1350,
