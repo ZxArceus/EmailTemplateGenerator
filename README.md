@@ -86,7 +86,7 @@ Headers:
   "timeStamp": "2026-01-06T18:37:02"
 }
 ```
-## Health Check
+### Health Check
 Endpoint: ``` GET /api/health```
 
 Response: ```"Email Generator is running!"```
@@ -95,7 +95,7 @@ Response: ```"Email Generator is running!"```
 
 Never hardcode your API key in the project.
 
-Store it in environment variables
+Store it in environment variables.
 
 
 ## API key access in code 
@@ -107,7 +107,7 @@ private String apiKey;
 
 ## How It Works
 
-1. User sends POST request to /generate with JSON body.    
+1. User sends POST request to /email/generate with JSON body.    
 
 2. EmailController receives the request.
 
@@ -119,11 +119,11 @@ private String apiKey;
 
 6. EmailService returns JSON response with:
 
-emailTemplate
+        emailTemplate
+   
+       responseTimeInMs
 
-responseTimeInMs
-
-timeStamp
+          timeStamp
 
 ### Sample Output
 Request:
