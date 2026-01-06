@@ -164,7 +164,7 @@ Tone – Formal, polite, friendly, etc.
 
 ### Prompt Template used :
 
-'''
+```
 Write a short, {tone} email to {recipient} about: {purpose}.
 Include a subject line.
 Keep it brief (3–5 sentences).
@@ -178,6 +178,6 @@ Subject: [subject]
 [closing]
 [Your Name]
 
-'''
+```
 
 This prompt ensures reliable, real-world usable responses from the AI model.
