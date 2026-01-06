@@ -44,7 +44,7 @@ A **Spring Boot REST API** application that generates professional email templat
 
 ```bash
 git clone https://github.com/yourusername/email-template-generator.git
-cd email-template-generator
+cd EmailTemplateGenerator
 ```
 ### Set your OpenRouter API key
 
