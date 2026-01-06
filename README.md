@@ -48,9 +48,8 @@ cd EmailTemplateGenerator
 ```
 ### Set Environment variable 
 
-
-```
 Permanent setup (Windows):
+```
 setx OPENROUTER_API_KEY "your_api_key_here"
 ```
 Restart your IDE or terminal after setting the environment variable.
@@ -102,7 +101,11 @@ Never hardcode your API key in the project.
 
 Store it in environment variables.
 
+Windows (Command Prompt)
 
+```
+setx OPENROUTER_API_KEY "your_api_key_here"
+```
 ## API key access in code 
 
 ```
@@ -122,13 +125,10 @@ private String apiKey;
 
 5. API returns generated email text.
 
-6. EmailService returns JSON response with:
-
-        emailTemplate
-   
-       responseTimeInMs
-
-          timeStamp
+6. EmailService returns JSON response with:  
+            emailTemplate
+          responseTimeInMs
+             timeStamp
 
 ### Sample Output
 Request:
