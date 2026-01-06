@@ -151,3 +151,33 @@ Response:
   "timeStamp": "2026-01-06T18:37:02.296647"
 }
 ```
+
+## How the prompt is designed 
+
+The AI prompt is carefully structured to guide the model toward generating professional, readable email templates.
+
+Prompt Inputs
+The prompt dynamically uses the following user inputs:
+Purpose – Reason for writing the email
+Recipient – Person the email is addressed to
+Tone – Formal, polite, friendly, etc.
+
+### Prompt Template used :
+
+'''
+Write a short, {tone} email to {recipient} about: {purpose}.
+Include a subject line.
+Keep it brief (3–5 sentences).
+Format:
+Subject: [subject]
+
+[greeting]
+
+[body]
+
+[closing]
+[Your Name]
+
+'''
+
+This prompt ensures reliable, real-world usable responses from the AI model.
