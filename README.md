@@ -46,11 +46,11 @@ A **Spring Boot REST API** application that generates professional email templat
 git clone https://github.com/yourusername/EmailTemplateGenerator.git
 cd EmailTemplateGenerator
 ```
-### Set your OpenRouter API key
+### Set Environment variable 
 
 
-```Windows 
-setx OPENROUTER_API_KEY"YOUR_OPENROUTER_API_KEY"
+```Permanent setup (Windows):
+setx OPENROUTER_API_KEY "your_api_key_here"
 ```
 Restart your IDE or terminal after setting the environment variable.
 
@@ -67,65 +67,44 @@ server.port=8080
 mvn clean install
 mvn spring-boot:run
 ```
-### API Endpoint
-```
-POST /email/generate
-
-Content-Type: application/json
-```
-
-
- Example Request JSON
-```json
-
+## API Documentation
+Generate Email Template
+Endpoint: ```POST /email/generate```
+Headers:
+```Content-Type: application/json```
+```Request Body:
 {
   "purpose": "job interview follow-up",
-  "recipient": "HR Manager",
+  "recipientName": "HR Manager",
   "tone": "polite"
 }
 ```
- 
- Example Response JSON
-```json
-
+```Response (200 OK):
 {
-  "emailTemplate": "Subject: Interview Follow-Up\n\nDear HR Manager,\n\nThank you for the opportunity to interview for the Software Developer role. I appreciate your time and consideration. I am excited about the possibility of joining your team and contributing to ongoing projects.\n\nPlease let me know if you require any additional information.\n\nBest regards,\nAnkit",
+  "emailTemplate": "Subject: Interview Follow-Up\n\nDear HR Manager,\n\nThank you for the opportunity to interview for the Software Developer role. I appreciate your time and consideration. I am excited about the possibility of joining your team and contributing to ongoing projects.\n\nPlease let me know if you require any additional information.\n\nBest regards,\n[Your Name]",
   "responseTimeInMs": 1350,
   "timeStamp": "2026-01-06T18:37:02"
 }
 ```
+### Health Check
+Endpoint:``` GET /api/health```
+Response: ```"Email Generator is running!"```
 
 ### API Key Environment Handling
 
 Never hardcode your API key in the project.
 
-Store it in environment variables:
+Store it in environment variables
 
 
-Access it in Spring Boot via 
+### API key access in code 
 
 ```
 @Value("${openrouter.api.key}"):
 private String apiKey;
-
 ```
 
 ## How It Works
-
-User Request (JSON)
-        ↓
-EmailController
-        ↓
-EmailService
-        ↓
-OpenRouterAIService
-        ↓
-OpenRouter API (gpt-4o-mini)
-        ↓
-AI Generated Email
-        ↓
-EmailResponse (JSON)
-
 
 1. User sends POST request to /generate with JSON body.    
 
