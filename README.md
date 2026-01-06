@@ -156,10 +156,14 @@ Response:
 
 The AI prompt is carefully structured to guide the model toward generating professional, readable email templates.
 
-Prompt Inputs
+### Prompt Inputs
+
 The prompt dynamically uses the following user inputs:
+
 Purpose – Reason for writing the email
+
 Recipient – Person the email is addressed to
+
 Tone – Formal, polite, friendly, etc.
 
 ### Prompt Template used :
