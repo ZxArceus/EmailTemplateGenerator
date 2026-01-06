@@ -29,7 +29,7 @@ A **Spring Boot REST API** application that generates professional email templat
 
 ---
 
-## 📝 Prerequisites
+## Prerequisites
 
 - Java 17+
 - Maven
@@ -46,7 +46,7 @@ A **Spring Boot REST API** application that generates professional email templat
 git clone https://github.com/yourusername/email-template-generator.git
 cd email-template-generator
 ```
-###Set your OpenRouter API key
+### Set your OpenRouter API key
 
 
 ```Windows 
@@ -54,20 +54,20 @@ setx OPENROUTER_API_KEY"YOUR_OPENROUTER_API_KEY"
 ```
 Restart your IDE or terminal after setting the environment variable.
 
-###Update application.properties
+### Update application.properties
 
 
 ```
 openrouter.api.key=${OPENROUTER_API_KEY}
 server.port=8080
 ```
-###Build and Run
+### Build and Run
 
 ```
 mvn clean install
 mvn spring-boot:run
 ```
-## API Endpoint
+### API Endpoint
 ```
 POST /generate
 
@@ -75,7 +75,7 @@ Content-Type: application/json
 ```
 
 
-🔹 Example Request JSON
+ Example Request JSON
 ```json
 
 {
@@ -85,7 +85,7 @@ Content-Type: application/json
 }
 ```
  
-🔹 Example Response JSON
+ Example Response JSON
 ```json
 
 {
@@ -95,19 +95,20 @@ Content-Type: application/json
 }
 ```
 
-##API Key Environment Handling
+### API Key Environment Handling
+
 Never hardcode your API key in the project.
 
 Store it in environment variables:
-
 
 
 Access it in Spring Boot via 
 
 ```
 @Value("${openrouter.api.key}"):
-```
 private String apiKey;
+
+```
 
 ## How It Works
 
@@ -129,7 +130,7 @@ responseTimeInMs
 
 timeStamp
 
-###Sample Output
+### Sample Output
 Request:
 
 ```json
