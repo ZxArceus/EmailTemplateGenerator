@@ -43,7 +43,7 @@ A **Spring Boot REST API** application that generates professional email templat
 ###  Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/email-template-generator.git
+git clone https://github.com/yourusername/EmailTemplateGenerator.git
 cd EmailTemplateGenerator
 ```
 ### Set your OpenRouter API key
@@ -69,7 +69,7 @@ mvn spring-boot:run
 ```
 ### API Endpoint
 ```
-POST /generate
+POST /email/generate
 
 Content-Type: application/json
 ```
